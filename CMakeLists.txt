@@ -8,8 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # so that gha works f t m
 set(CMAKE_SYSTEM_NAME Windows)
 set(TOOLCHAIN_PREFIX x86)
-set(CMAKE_C_COMPILER cl)
-set(CMAKE_CXX_COMPILER cl)
 set(CMAKE_GENERATOR_PLATFORM Win32)
 
 
@@ -24,7 +22,6 @@ if(MSVC)
     set(CMAKE_VS_PLATFORM_NAME "x86")
 else()
     add_compile_options("-finput-charset=UTF-8" "-fexec-charset=UTF-8" "-m32")
-    message(FATAL_ERROR "Must use MSVC")
 endif()
 
 add_library(${PROJECT_NAME} SHARED main.cpp)

@@ -2,3 +2,7 @@ build
 out
 cmake-*
 .vscode
+.vs
+.idea
+CMakeSettings.json
+CMakePresets.json
